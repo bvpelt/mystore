@@ -1,0 +1,28 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "name": "Joker",
+            "releaseYear": 2019,
+            "imdbUrl": "https://www.imdb.com/title/tt7286456/?ref_=hm_fanfav_tt_1_pd_fp1"
+        },
+        {
+            "id": 2,
+            "name": "Paatal Lok",
+            "releaseYear": 2020,
+            "imdbUrl": "https://www.imdb.com/title/tt9680440/?ref_=hm_fanfav_tt_2_pd_fp1"
+        },
+        {
+            "id": 3,
+            "name": "Parasite",
+            "releaseYear": 2019,
+            "imdbUrl": "https://www.imdb.com/title/tt6751668/?ref_=hm_fanfav_tt_3_pd_fp1"
+        },
+        {
+            "id": 4,
+            "name": "The Last Dance",
+            "releaseYear": 2020,
+            "imdbUrl": "https://www.imdb.com/title/tt8420184/?ref_=hm_fanfav_tt_4_pd_fp1"
+        }
+    ]
+}

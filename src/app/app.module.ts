@@ -8,14 +8,21 @@ import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { MyCounterComponent } from './my-counter/my-counter.component';
+import { MoviesComponent } from './movies/movies.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MoviesService } from './shared/service/movies.service';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyCounterComponent
+    MyCounterComponent,
+    MoviesComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
@@ -26,7 +33,7 @@ import { MyCounterComponent } from './my-counter/my-counter.component';
     }),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
-  providers: [],
+  providers: [MoviesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

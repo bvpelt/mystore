@@ -1,0 +1,15 @@
+<div>
+    <ul class="list-group">
+        <div class="list-group" *ngFor="let movie of movies; let i=index">
+            <div class="row">
+                <div class="col-sm-8">
+                    <a class="list-group-item clearfix" [routerLink]="['/movie', movie.id]">
+                        {{ movie.id}} - {{ movie.name}} {{movie.releaseYear}}
+
+                    </a>
+                </div>
+                <a href={{movie.imdbUrl}}>{{movie.name}} at imdb</a>
+            </div>
+        </div>
+    </ul>
+</div>
