@@ -15,6 +15,9 @@ $ ng generate store AppState --root --module app.module.ts
 $ ng generate action actions
 ```
 
+## Effects
+- see https://ngrx.io/guide/effects
+
 ## References
 - https://ngrx.io/guide/store
 - https://indepth.dev/how-to-start-flying-with-angular-and-ngrx/

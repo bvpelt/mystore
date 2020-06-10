@@ -13,6 +13,14 @@ export class MoviesService {
 
   constructor(private http: HttpClient) { }
 
+  getAll() {
+    let headers = new HttpHeaders()
+      .set('content-type', 'application/json')
+      .set('Cache-Control', 'public max-age=3 must-revalidate');
+
+    return this.http.get(this.url, { headers: headers });
+  }
+
   getMovies(): Observable<Movie[] | any> {
     let headers = new HttpHeaders()
       .set('content-type', 'application/json')
