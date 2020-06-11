@@ -1,6 +1,6 @@
 import { Action, createReducer, on, ActionReducerMap } from '@ngrx/store';
 import { CounterAction, CounterActionTypes } from '../actions/counter.actions';
-
+import { AppState } from './index';
 
 export const counterFeatureKey = 'counter';
 
@@ -37,12 +37,5 @@ export function counterReducer(state: CounterState = initialState, action: Count
   }
 }
 
-export interface AppState {
-  counter: CounterState;
-}
-
-export const reducers: ActionReducerMap<AppState> = {
-  counter: counterReducer
-};
 
 export const selectCounter = (state: AppState) => state.counter.counter;

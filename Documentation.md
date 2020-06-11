@@ -18,3 +18,4 @@ $ ng generate action actions
 ## References
 - https://ngrx.io/guide/store
 - https://indepth.dev/how-to-start-flying-with-angular-and-ngrx/
+- https://github.com/zalmoxisus/remote-redux-devtools/
