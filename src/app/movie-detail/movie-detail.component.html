@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container" *ngIf="movie">
     <ul class="list-group">
         <li class="list-group-item">{{movie.id}}</li>
         <li class="list-group-item">{{movie.name}}</li>
         <li class="list-group-item">{{movie.releaseYear}}</li>
-        <li class="list-group-item">{{movie.imdbUrl}}</li>
+        <li class="list-group-item"><a href={{movie.imdbUrl}}>visit imdb</a></li>
     </ul>
 </div>

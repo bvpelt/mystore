@@ -1,0 +1,44 @@
+<div class="container">
+    <form id="movie-form" [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label>
+                Id:
+                <input type="text" formControlName="id">
+            </label>
+        </div>
+        <div>
+            <label>
+                Name:
+                <input type="text" formControlName="name" required>
+            </label>
+        </div>
+        <div>
+            <label>
+                Release year:
+                <input type="text" formControlName="releaseYear">
+            </label>
+        </div>
+        <div>
+            <label>
+                IMDB url:
+                <input type="text" formControlName="imdbUrl">
+            </label>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" [disabled]="!movieForm.valid">Submit</button>
+        </div>
+    </form>
+
+    <p>
+        Form Status: {{ movieForm.status }}
+    </p>
+    <p>
+        <!--
+    <button type="button" class="btn btn-primary" (click)="addMovie()">Add Movie</button>
+           <button type="submit" class="btn btn-primary" [disabled]="!movieForm.valid">Submit</button>
+-->
+    </p>
+    <p>
+        <button (click)="updateMovieForm()">Update Profile</button>
+    </p>
+</div>
