@@ -7,15 +7,15 @@
             </li>
         </ul>
     </nav>
+
+    <router-outlet></router-outlet>
+
     <div *ngIf="movies$">
         <ul class="list-group">
-            <!--
-        <div class="list-group" *ngFor="let movie of movies; let i=index">
-        -->
             <div class="list-group" *ngFor="let movie of movies$ | async">
                 <div class="row">
                     <div class="col-sm-8">
-                        <a [routerLink]="['/movie', movie.id]">
+                        <a [routerLink]="['detail', movie.id]">
                             {{ movie.id}} - {{ movie.name}} {{movie.releaseYear}}
                         </a>
                     </div>

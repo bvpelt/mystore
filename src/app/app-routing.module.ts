@@ -11,9 +11,13 @@ const routes: Routes = [
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: MyCounterComponent },
-  { path: 'movies', component: MoviesPageComponent /*, resolve: { data: MoviesResolver } */ },
-  { path: 'movie/:id', component: MovieDetailComponent },
-  { path: 'movies/editmovie', component: MovieEditorComponent }
+  {
+    path: 'movies', component: MoviesPageComponent /*, resolve: { data: MoviesResolver } */,
+    children: [
+      { path: 'detail/:id', component: MovieDetailComponent },
+      { path: 'editmovie', component: MovieEditorComponent }
+    ]
+  }
 ];
 
 @NgModule({
