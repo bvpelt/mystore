@@ -91,7 +91,7 @@ export class MoviesService {
       }));
   }
 
-  removeCity(movie: Movie): Observable<any> {
+  deleteMovie(movie: Movie): Observable<any> {
     return this.http.delete<Movie>(`${this.url}/${movie.id}`).pipe(
       tap(result => console.log('Deleted via: ', this.url, '/', movie.id, ' result:', result)),
       catchError(err => {

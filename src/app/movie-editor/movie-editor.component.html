@@ -1,5 +1,5 @@
 <div class="container">
-    <form id="movie-form" [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+    <form id="movie-form" [formGroup]="movieFormGroup" (ngSubmit)="onSubmit()">
         <div>
             <label>
                 Id:
@@ -25,12 +25,12 @@
             </label>
         </div>
         <div>
-            <button type="submit" class="btn btn-primary" [disabled]="!movieForm.valid">Submit</button>
+            <button type="submit" class="btn btn-primary" [disabled]="!movieFormGroup.valid">Submit</button>
         </div>
     </form>
 
     <p>
-        Form Status: {{ movieForm.status }}
+        Form Status: {{ movieFormGroup.status }}
     </p>
     <p>
         <!--
