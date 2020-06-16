@@ -1,5 +1,9 @@
 <div class="container">
-    <h2>Movies</h2>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2>Movies</h2>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <ul class="navbar-nav">
             <li class="nav-item active">
@@ -8,16 +12,20 @@
         </ul>
     </nav>
 
-    <router-outlet></router-outlet>
-
+    <div class="router">
+        <router-outlet></router-outlet>
+    </div>
     <div *ngIf="movies$">
         <ul class="list-group">
-            <div class="list-group" *ngFor="let movie of movies$ | async">
+            <div class="list-group" *ngFor="let movie of movies$ | async; let i=index">
                 <div class="row">
                     <div class="col-sm-8">
                         <a [routerLink]="['detail', movie.id]">
                             {{ movie.id}} - {{ movie.name}} {{movie.releaseYear}}
                         </a>
+                        <button type="button" class="btn btn-default" (click)="delete(i)">
+                            <fa-icon [icon]="trashIcon"></fa-icon>
+                        </button>
                     </div>
                     <div class="col-sm-4">
                         <a href={{movie.imdbUrl}}>{{movie.name}} at imdb</a>

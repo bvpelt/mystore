@@ -1,0 +1,13 @@
+.jumbotron {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.router {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    float: right;
+}

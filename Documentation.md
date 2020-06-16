@@ -19,3 +19,5 @@ $ ng generate action actions
 - https://ngrx.io/guide/store
 - https://indepth.dev/how-to-start-flying-with-angular-and-ngrx/
 - https://github.com/zalmoxisus/remote-redux-devtools/
+- font awesom https://www.angularjswiki.com/angular/how-to-use-font-awesome-icons-in-angular-applications/
+

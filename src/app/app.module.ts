@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,17 +24,20 @@ import { MovieEditorComponent } from './movie-editor/movie-editor.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MyCounterComponent,
-    MoviesPageComponent,
+    MovieEditorComponent,
     MovieDetailComponent,
     MovieNewComponent,
-    MovieEditorComponent
+    MoviesPageComponent,
+    MyCounterComponent,
+
   ],
   imports: [
-    BrowserModule,
-    ReactiveFormsModule,
-    HttpClientModule,
     AppRoutingModule,
+    BrowserModule,
+    EffectsModule.forRoot([MovieEffects]),
+    FontAwesomeModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {
@@ -41,8 +45,7 @@ import { MovieEditorComponent } from './movie-editor/movie-editor.component';
         strictActionImmutability: true,
       }
     }),
-    !environment.production ? StoreDevtoolsModule.instrument() : [],
-    EffectsModule.forRoot([MovieEffects])
+    !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   providers: [MoviesService],
   bootstrap: [AppComponent]
